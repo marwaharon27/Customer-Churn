@@ -19,6 +19,14 @@ CREATE TABLE Fact_Telecom_Company(
     Number_of_Referrals INT,
     Churn VARCHAR(50)
 );
+ALTER TABLE Fact_Telecom_Company
+ADD PRIMARY KEY (
+    customer_id,
+    City_Key,
+    Contract_Key,
+    Services_Key,
+    churn_key
+);
 -- =====================================================================================================
 ALTER TABLE telecom_merged
 ADD COLUMN Tenure_Group VARCHAR(20);
