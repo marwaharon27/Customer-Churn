@@ -35,11 +35,12 @@ BASE = dict(
 def compact_css():
     st.markdown(f"""
     <style>
+    <style>
     .block-container {{
-        padding-top: 0.25rem !important;
-        padding-left: 1.6rem !important;
-        padding-right: 1.6rem !important;
-        padding-bottom: 0rem !important;
+    padding-top: 4rem !important;
+    padding-left: 1.6rem !important;
+    padding-right: 1.6rem !important;
+    padding-bottom: 0rem !important;
     }}
 
     div[data-testid="stVerticalBlock"] {{
@@ -110,6 +111,7 @@ def kpi_card(col, label, value, color=TEAL, help_text=None):
 def show():
     compact_css()
     df_full = load_full()
+    st.markdown("<div style='height:40px'></div>", unsafe_allow_html=True)
 
     # Header
     st.markdown(f"""

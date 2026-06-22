@@ -37,10 +37,10 @@ def compact_css():
     st.markdown(f"""
     <style>
     .block-container {{
-        padding-top: 0.25rem !important;
-        padding-left: 1.6rem !important;
-        padding-right: 1.6rem !important;
-        padding-bottom: 0rem !important;
+    padding-top: 3rem !important;
+    padding-left: 1.6rem !important;
+    padding-right: 1.6rem !important;
+    padding-bottom: 0rem !important;
     }}
 
     div[data-testid="stVerticalBlock"] {{
@@ -126,6 +126,7 @@ def end_card():
 def show():
     compact_css()
     df = load_full()
+    st.markdown("<div style='height:35px'></div>", unsafe_allow_html=True)
 
     # Header
     st.markdown(f"""

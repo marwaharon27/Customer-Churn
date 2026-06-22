@@ -89,6 +89,7 @@ def train_model(df):
 
 def show():
     df = load_full()
+    st.markdown("<div style='height:35px'></div>", unsafe_allow_html=True)
 
     # ── Header ────────────────────────────────────────
     st.markdown(f"""
