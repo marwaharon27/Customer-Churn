@@ -1,33 +1,32 @@
 -- Step 11: Create Table Fact_Telecom_Company
 -- =====================================================================================================
-CREATE TABLE Fact_Telecom_Company(
-    customer_id VARCHAR(50),
-    City_Key INT,
-    Contract_Key INT,
-    Services_Key INT,
-    churn_key INT,
-    tenure INT,
-    Tenure_Group VARCHAR(50),
-    monthly_charges DECIMAL(10,2),
-    total_charges DECIMAL(10,2),
-    Total_Revenue DECIMAL(10,2),
-  Avg_Monthly_Long_Distance_Charges DECIMAL(10,2),
-  Avg_Monthly_GB_Download DECIMAL(10,2),
-  Total_Extra_Data_Charges DECIMAL(10,2),
-  Total_Long_Distance_Charges DECIMAL(10,2),
-   Total_Refunds DECIMAL(10,2),
-    Number_of_Referrals INT,
-    Churn VARCHAR(50)
-);
-ALTER TABLE Fact_Telecom_Company
-ADD PRIMARY KEY (
-    customer_id,
-    City_Key,
-    Contract_Key,
-    Services_Key,
-    churn_key
+Drop TABLE Fact_Telecom_Company;
+
+CREATE TABLE Fact_Telecom_Company (
+Fact_Key INT AUTO_INCREMENT PRIMARY KEY,
+customer_id VARCHAR(50),
+City_Key INT,
+Contract_Key INT,
+Services_Key INT,
+churn_key INT,
+tenure INT,
+Tenure_Group VARCHAR(50),
+monthly_charges DECIMAL(10,2),
+total_charges DECIMAL(10,2),
+Total_Revenue DECIMAL(10,2),
+Avg_Monthly_Long_Distance_Charges DECIMAL(10,2),
+Avg_Monthly_GB_Download DECIMAL(10,2),
+Total_Extra_Data_Charges DECIMAL(10,2),
+Total_Long_Distance_Charges DECIMAL(10,2),
+Total_Refunds DECIMAL(10,2),
+Number_of_Referrals INT,
+Churn VARCHAR(50)
 );
 -- =====================================================================================================
+
+ALTER TABLE telecom_merged 
+DROP COLUMN Tenure_Group;
+
 ALTER TABLE telecom_merged
 ADD COLUMN Tenure_Group VARCHAR(20);
 
@@ -42,9 +41,17 @@ CASE
     ELSE 'Unknown'
 END;
 -- =====================================================================================================
-
-INSERT INTO Fact_Telecom_Company
-SELECT 
+-- =====================================================================================================
+-- INSERT into Fact (Fact_Key generated automatically)
+-- =====================================================================================================
+INSERT INTO Fact_Telecom_Company (
+customer_id, City_Key, Contract_Key, Services_Key, churn_key,
+tenure, Tenure_Group, monthly_charges, total_charges, Total_Revenue,
+Avg_Monthly_Long_Distance_Charges, Avg_Monthly_GB_Download,
+Total_Extra_Data_Charges, Total_Long_Distance_Charges,
+Total_Refunds, Number_of_Referrals, Churn
+)
+SELECT
 m.customer_id,
 c.City_Key,
 ct.Contract_Key,
@@ -52,8 +59,8 @@ s.Services_Key,
 ch.churn_key,
 m.tenure,
 m.Tenure_Group,
-m.monthly_charges, 
-m.total_charges ,
+m.monthly_charges,
+m.total_charges,
 m.Total_Revenue,
 m.Avg_Monthly_Long_Distance_Charges,
 m.Avg_Monthly_GB_Download,
@@ -65,19 +72,17 @@ m.Churn
 FROM telecom_merged m
 
 LEFT JOIN Dim_City c
-ON m.City = c.City 
+ON m.City = c.City
 AND m.Zip_Code = c.Zip_Code
-AND m. Latitude = c. Latitude
-AND m. Longitude = c. Longitude	
+AND m.Latitude = c.Latitude
+AND m.Longitude = c.Longitude
 
--- Contract
 LEFT JOIN Dim_Contract ct
 ON m.Contract = ct.Contract
 AND m.Payment_Method = ct.Payment_Method
-AND m.Paperless_Billing = ct.Paperless_Billing
+AND m.Paperless_Billing= ct.Paperless_Billing
 AND m.Offer = ct.Offer
 
--- Services 
 LEFT JOIN Dim_Services s
 ON m.Phone_Service = s.Phone_Service
 AND m.Internet_Service = s.Internet_Service
@@ -86,32 +91,41 @@ AND m.Internet_Type = s.Internet_Type
 AND m.Online_Security = s.Online_Security
 AND m.Online_Backup = s.Online_Backup
 AND m.Device_Protection = s.Device_Protection
-AND m.Premium_Tech_Support = s.Premium_Tech_Support
+AND m.Premium_Tech_Support= s.Premium_Tech_Support
 AND m.Streaming_TV = s.Streaming_TV
 AND m.Streaming_Movies = s.Streaming_Movies
 AND m.Streaming_Music = s.Streaming_Music
 AND m.Unlimited_Data = s.Unlimited_Data
 
--- Churn
 LEFT JOIN Dim_Churn ch
 ON m.Churn_Category = ch.Churn_Category
 AND m.Churn_Reason = ch.Churn_Reason;
-
--- FOREIGN KEYS
+-- =====================================================================================================
+-- FOREIGN KEYS (now correct — customer_id is FK not PK)
+-- =====================================================================================================
+ALTER TABLE Fact_Telecom_Company
+ADD CONSTRAINT fk_city
+FOREIGN KEY (City_Key) REFERENCES Dim_City(City_Key);
+ALTER TABLE Fact_Telecom_Company
+ADD CONSTRAINT fk_contract
+FOREIGN KEY (Contract_Key) REFERENCES Dim_Contract(Contract_Key);
+ALTER TABLE Fact_Telecom_Company
+ADD CONSTRAINT fk_services
+FOREIGN KEY (Services_Key) REFERENCES Dim_Services(Services_Key);
+ALTER TABLE Fact_Telecom_Company
+ADD CONSTRAINT fk_churn
+FOREIGN KEY (churn_key) REFERENCES Dim_Churn(churn_key);
+ALTER TABLE Fact_Telecom_Company
+ADD CONSTRAINT fk_customer
+FOREIGN KEY (customer_id) REFERENCES Dim_Customer(customer_id);
 
 ALTER TABLE Fact_Telecom_Company
-ADD FOREIGN KEY (City_Key) REFERENCES Dim_City(City_Key);
-
-ALTER TABLE Fact_Telecom_Company
-ADD FOREIGN KEY (Contract_Key) REFERENCES Dim_Contract(Contract_Key);
-
-ALTER TABLE Fact_Telecom_Company
-ADD FOREIGN KEY (Services_Key) REFERENCES Dim_Services(Services_Key);
-
-ALTER TABLE Fact_Telecom_Company
-ADD FOREIGN KEY (churn_key) REFERENCES Dim_Churn(churn_key);
-
-ALTER TABLE Fact_Telecom_Company
-ADD FOREIGN KEY (customer_id) REFERENCES Dim_Customer(customer_id);
+ADD CONSTRAINT uq_fact_customer UNIQUE (customer_id);
 
 SELECT * FROM fact_telecom_company;
+-- =====================================================================================================
+-- 1 to 1 Customer Relationship
+SELECT customer_id, COUNT(*) AS fact_rows
+FROM Fact_Telecom_Company
+GROUP BY customer_id
+HAVING COUNT(*) > 1;

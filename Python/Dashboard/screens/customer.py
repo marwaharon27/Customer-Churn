@@ -37,10 +37,11 @@ def compact_css():
     st.markdown(f"""
     <style>
     .block-container {{
-    padding-top: 3rem !important;
+    padding-top: 0.5rem !important;
     padding-left: 1.6rem !important;
     padding-right: 1.6rem !important;
     padding-bottom: 0rem !important;
+                
     }}
 
     div[data-testid="stVerticalBlock"] {{
@@ -295,7 +296,7 @@ def show():
             xaxis=dict(**AX),
             yaxis=dict(**AX, range=[0, 100]),
             legend=dict(title=None, font=dict(size=10, color=TEXT), x=0.78, y=1.10),
-            margin=dict(t=8, b=20, l=30, r=5)
+            margin=dict(t=8, b=38, l=30, r=5)
         )
         st.plotly_chart(fig2, width='stretch', config={'displayModeBar': False})
         end_card()
@@ -368,8 +369,10 @@ def show():
                 .sort_values('Revenue', ascending=False)
             )
 
+            pdf['Payment_Method_Wrapped'] = pdf['Payment_Method'].str.replace(' ', '<br>')
+
             fig4 = go.Figure(go.Bar(
-                x=pdf['Payment_Method'],
+                x=pdf['Payment_Method_Wrapped'],
                 y=pdf['Revenue'],
                 marker_color=TEAL,
                 text=[f"${v/1e6:.1f}M" if v >= 1e6 else f"${v/1000:.0f}K" for v in pdf['Revenue']],
@@ -382,7 +385,7 @@ def show():
                 height=150,
                 xaxis=dict(**AX, tickangle=0),
                 yaxis=dict(**AX),
-                margin=dict(t=8, b=35, l=25, r=5)
+                margin=dict(t=8, b=45, l=25, r=5)
             )
             st.plotly_chart(fig4, width='stretch', config={'displayModeBar': False})
             end_card()
@@ -440,6 +443,23 @@ def show():
             start_card()
             chart_title("Tech Support Requested by Internet Type")
 
+            st.markdown(f"""
+            <div style='display:flex;gap:14px;align-items:center;
+                        margin-top:-15px;margin-bottom:-18px;margin-left:110px;
+                        font-size:10px;color:{TEXT}'>
+                <span style='display:flex;align-items:center;gap:4px'>
+                    <span style='width:8px;height:8px;background:{RED};
+                                 display:inline-block;border-radius:1px'></span>
+                    Yes
+                </span>
+                <span style='display:flex;align-items:center;gap:4px'>
+                    <span style='width:8px;height:8px;background:{TEAL};
+                                 display:inline-block;border-radius:1px'></span>
+                    No
+                </span>
+            </div>
+            """, unsafe_allow_html=True)
+
             tdf = (
                 df[df['Internet_Service'] == 'Yes']
                 .groupby(['Internet_Type', 'Premium_Tech_Support'])
@@ -475,9 +495,9 @@ def show():
                 height=215,
                 barmode='stack',
                 xaxis=dict(**AX),
-                yaxis=dict(**AX),
-                legend=dict(title=None, font=dict(size=10, color=TEXT), x=0.78, y=1.28),
-                margin=dict(t=22, b=20, l=25, r=5)
+                yaxis=dict(**AX, domain=[0.10, 1.0]),
+                showlegend=False,
+                margin=dict(t=0, b=70, l=25, r=5)
             )
             st.plotly_chart(fig6, width='stretch', config={'displayModeBar': False})
             end_card()
@@ -487,16 +507,16 @@ def show():
             chart_title("Key Recommendations")
 
             st.markdown(f"""
-            <div style='font-size:11.5px;color:{TEXT};line-height:1.55;padding:4px 6px'>
-                <div style='margin-bottom:10px'>
+            <div style='font-size:11.5px;color:{TEXT};line-height:1.55;padding:4px 6px;margin-top:-5px'>
+                <div style='margin-bottom:5px'>
                     🔻 <b>Senior Citizens Retention:</b><br>
                     Senior churn is <b>41.7%</b>, so they need special retention offers.
                 </div>
-                <div style='margin-bottom:10px'>
+                <div style='margin-bottom:5px'>
                     🔻 <b>Competitor Impact:</b><br>
                     Competitors caused around <b>$1.69M</b> revenue loss.
                 </div>
-                <div style='margin-bottom:10px'>
+                <div style='margin-bottom:5px'>
                     ▲ <b>Premium Segment:</b><br>
                     Married customers average <b>$4,010</b> revenue.
                 </div>

@@ -1,0 +1,2 @@
+Best_CV_F1,Best_Threshold,Test_Accuracy,Test_Precision,Test_Recall,Test_F1,Test_ROC_AUC,TN,FP,FN,TP,model__colsample_bytree,model__gamma,model__learning_rate,model__max_depth,model__min_child_weight,model__n_estimators,model__reg_alpha,model__reg_lambda,model__subsample,sampler__sampling_strategy
+70.58,0.49,82.3,63.5,78.6,70.3,89.5,866,169,80,294,0.9864102085222721,3.3781353947126056,0.1046784132164857,6,8,529,1.447882960896207,3.5351712384334233,0.7465997137078901,0.6833230775668371

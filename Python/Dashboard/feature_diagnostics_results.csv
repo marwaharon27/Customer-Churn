@@ -1,0 +1,145 @@
+Feature_Set,Model,Sampling,Best_Threshold,Accuracy,Precision,Recall,F1,ROC_AUC,TN,FP,FN,TP,Num_Features_Before_Encoding
+Business_Features_No_Total_Revenue,XGBoost,RandomUnderSampler,0.66,84.4,69.3,73.8,71.5,89.8,913,122,98,276,24
+Business_Features_No_Total_Revenue,XGBoost,RandomOverSampler,0.61,83.5,66.0,77.8,71.4,89.8,885,150,83,291,24
+Business_Features_No_Total_Revenue,XGBoost,SMOTE,0.57,83.6,66.7,76.5,71.2,89.9,892,143,88,286,24
+Base_Plus_Business_Features,XGBoost,None,0.35,83.0,64.8,78.6,71.0,89.9,875,160,80,294,26
+Behavior_And_Service_Focused,Gradient Boosting,None,0.34,82.8,64.4,78.9,70.9,89.7,872,163,79,295,20
+Base_Without_Total_Revenue,XGBoost,SMOTE,0.64,83.8,67.9,74.1,70.8,89.9,904,131,97,277,10
+Business_Features_No_Total_Revenue,Gradient Boosting,RandomUnderSampler,0.66,84.0,68.8,73.0,70.8,89.8,911,124,101,273,24
+Base_Plus_Business_Features,XGBoost,SMOTE,0.56,83.1,65.5,77.0,70.8,89.7,883,152,86,288,26
+Business_Features_No_Total_Revenue,LightGBM,SMOTE,0.48,83.0,65.0,77.5,70.7,89.4,879,156,84,290,24
+Base_Without_Total_Revenue,XGBoost,None,0.43,84.2,69.8,71.7,70.7,90.0,919,116,106,268,10
+Base_Plus_Business_Features,XGBoost,RandomOverSampler,0.57,82.5,63.6,79.4,70.6,89.8,865,170,77,297,26
+Business_Features_No_Total_Revenue,XGBoost,None,0.37,83.1,65.6,76.5,70.6,90.0,885,150,88,286,24
+Behavior_And_Service_Focused,XGBoost,None,0.33,82.3,63.0,80.2,70.6,89.6,859,176,74,300,20
+Business_Features_No_Total_Revenue,Gradient Boosting,SMOTE,0.57,83.2,65.9,75.9,70.6,89.7,888,147,90,284,24
+Business_Features_No_Total_Revenue,Gradient Boosting,None,0.3,82.0,62.5,81.0,70.5,90.0,853,182,71,303,24
+Base_Without_Total_Revenue,Gradient Boosting,RandomOverSampler,0.62,83.0,65.2,76.7,70.5,89.8,882,153,87,287,10
+Base_Plus_Business_Features,Gradient Boosting,RandomOverSampler,0.6,82.8,64.8,77.3,70.5,89.7,878,157,85,289,26
+Behavior_And_Service_Focused,XGBoost,SMOTE,0.52,82.4,63.5,79.1,70.5,89.4,865,170,78,296,20
+Base_Without_Total_Revenue,Gradient Boosting,RandomUnderSampler,0.68,84.1,69.5,71.4,70.4,89.7,918,117,107,267,10
+Base_Without_Total_Revenue,Gradient Boosting,None,0.37,82.9,65.1,76.7,70.4,90.0,881,154,87,287,10
+Base_Plus_Business_Features,Gradient Boosting,None,0.3,82.0,62.4,80.7,70.4,89.9,853,182,72,302,26
+Base_Without_Total_Revenue,XGBoost,RandomUnderSampler,0.65,83.5,67.1,74.1,70.4,89.7,899,136,97,277,10
+Base_Without_Revenue_And_Charges,LightGBM,SMOTE,0.5,82.7,64.4,77.5,70.4,89.1,875,160,84,290,9
+Base_Without_Total_Revenue,XGBoost,RandomOverSampler,0.62,83.0,65.4,76.2,70.4,89.8,884,151,89,285,10
+Base_11_Features,Gradient Boosting,SMOTE,0.52,81.7,61.7,81.8,70.3,89.6,845,190,68,306,11
+Base_11_Features,XGBoost,RandomOverSampler,0.6,82.6,64.3,77.5,70.3,89.6,874,161,84,290,11
+Base_11_Features,XGBoost,SMOTE,0.58,82.4,63.7,78.3,70.3,89.7,868,167,81,293,11
+Base_11_Features,XGBoost,None,0.33,82.0,62.5,80.2,70.3,89.8,855,180,74,300,11
+Business_Features_No_Total_Revenue,Gradient Boosting,RandomOverSampler,0.62,83.0,65.7,75.4,70.2,89.8,888,147,92,282,24
+Base_Plus_Business_Features,Gradient Boosting,RandomUnderSampler,0.6,82.6,64.4,77.3,70.2,89.5,875,160,85,289,26
+Base_11_Features,Gradient Boosting,None,0.34,82.3,63.4,78.6,70.2,89.8,865,170,80,294,11
+Behavior_And_Service_Focused,Gradient Boosting,SMOTE,0.52,82.3,63.4,78.6,70.2,89.3,865,170,80,294,20
+Base_Without_Total_Revenue,Gradient Boosting,SMOTE,0.49,81.3,60.8,82.9,70.1,89.5,835,200,64,310,10
+Base_Plus_Business_Features,Gradient Boosting,SMOTE,0.51,82.0,62.6,79.7,70.1,89.5,857,178,76,298,26
+Behavior_And_Service_Focused,XGBoost,RandomOverSampler,0.6,82.3,63.7,77.5,70.0,89.5,870,165,84,290,20
+Base_Without_Revenue_And_Charges,Gradient Boosting,None,0.34,82.3,63.5,77.8,70.0,89.7,868,167,83,291,9
+Base_Without_Total_Revenue,LightGBM,SMOTE,0.54,83.1,66.3,74.1,69.9,89.3,894,141,97,277,10
+Base_Plus_Business_Features,Logistic Regression,SMOTE,0.6,82.1,63.1,78.3,69.9,89.1,864,171,81,293,26
+Base_11_Features,XGBoost,RandomUnderSampler,0.66,83.3,66.8,73.3,69.9,89.6,899,136,100,274,11
+Base_Without_Total_Revenue,LightGBM,RandomOverSampler,0.67,84.1,70.3,69.5,69.9,88.9,925,110,114,260,10
+Base_Without_Revenue_And_Charges,XGBoost,None,0.4,83.1,66.3,73.8,69.9,89.6,895,140,98,276,9
+Behavior_And_Service_Focused,Gradient Boosting,RandomOverSampler,0.57,81.8,62.2,79.7,69.9,89.5,854,181,76,298,20
+Base_Plus_Business_Features,Logistic Regression,None,0.57,81.6,61.9,80.2,69.8,89.1,850,185,74,300,26
+Base_Plus_Business_Features,XGBoost,RandomUnderSampler,0.59,82.2,63.5,77.5,69.8,89.6,868,167,84,290,26
+Base_Without_Total_Revenue,LightGBM,None,0.33,82.1,63.3,77.8,69.8,89.0,866,169,83,291,10
+Base_11_Features,Gradient Boosting,RandomOverSampler,0.55,81.5,61.7,80.2,69.8,89.7,849,186,74,300,11
+Base_Without_Revenue_And_Charges,XGBoost,RandomOverSampler,0.63,82.4,64.1,76.5,69.8,89.6,875,160,88,286,9
+Base_Without_Revenue_And_Charges,XGBoost,SMOTE,0.58,82.3,63.7,77.0,69.7,89.5,871,164,86,288,9
+Behavior_And_Service_Focused,XGBoost,RandomUnderSampler,0.63,82.6,64.8,75.4,69.7,89.4,882,153,92,282,20
+Base_11_Features,Gradient Boosting,RandomUnderSampler,0.59,82.0,63.1,77.8,69.7,89.6,865,170,83,291,11
+Behavior_And_Service_Focused,Gradient Boosting,RandomUnderSampler,0.53,81.0,60.4,82.4,69.7,89.4,833,202,66,308,20
+Behavior_And_Service_Focused,LightGBM,SMOTE,0.47,82.2,63.6,77.0,69.6,88.9,870,165,86,288,20
+Base_Without_Revenue_And_Charges,Gradient Boosting,SMOTE,0.57,82.1,63.4,77.0,69.6,89.3,869,166,86,288,9
+Base_Without_Revenue_And_Charges,Gradient Boosting,RandomOverSampler,0.52,80.9,60.3,82.1,69.5,89.5,833,202,67,307,9
+Base_Plus_Business_Features,LightGBM,RandomOverSampler,0.5,81.6,62.1,78.9,69.5,88.8,855,180,79,295,26
+Business_Features_No_Total_Revenue,Logistic Regression,SMOTE,0.62,82.1,63.5,76.7,69.5,89.0,870,165,87,287,24
+Base_Plus_Business_Features,Logistic Regression,RandomUnderSampler,0.58,81.6,62.2,78.6,69.4,89.0,856,179,80,294,26
+Business_Features_No_Total_Revenue,Logistic Regression,RandomOverSampler,0.55,81.1,60.7,81.0,69.4,89.0,839,196,71,303,24
+Behavior_And_Service_Focused,LightGBM,None,0.31,81.3,61.4,79.7,69.4,88.8,848,187,76,298,20
+Base_Plus_Business_Features,Logistic Regression,RandomOverSampler,0.63,82.4,64.4,75.1,69.4,89.0,880,155,93,281,26
+Base_11_Features,LightGBM,None,0.42,83.4,67.9,70.9,69.4,88.7,910,125,109,265,11
+Base_Without_Revenue_And_Charges,Gradient Boosting,RandomUnderSampler,0.63,82.1,63.6,76.2,69.3,89.5,872,163,89,285,9
+Business_Features_No_Total_Revenue,Logistic Regression,None,0.61,81.8,62.6,77.5,69.3,89.0,862,173,84,290,24
+Base_Without_Revenue_And_Charges,XGBoost,RandomUnderSampler,0.59,81.5,62.1,78.3,69.3,89.5,856,179,81,293,9
+Business_Features_No_Total_Revenue,Logistic Regression,RandomUnderSampler,0.57,81.1,61.0,79.9,69.2,88.9,844,191,75,299,24
+Business_Features_No_Total_Revenue,LightGBM,None,0.35,82.3,64.2,75.1,69.2,88.8,878,157,93,281,24
+Base_Without_Revenue_And_Charges,LightGBM,None,0.31,81.1,61.1,79.7,69.1,88.9,845,190,76,298,9
+Business_Features_No_Total_Revenue,Random Forest,SMOTE,0.53,82.3,64.2,74.9,69.1,88.8,879,156,94,280,24
+Base_11_Features,LightGBM,SMOTE,0.51,82.0,63.6,75.7,69.1,88.9,873,162,91,283,11
+Business_Features_No_Total_Revenue,LightGBM,RandomOverSampler,0.55,82.2,64.1,74.9,69.1,88.8,878,157,94,280,24
+Behavior_And_Service_Focused,Logistic Regression,SMOTE,0.62,81.5,62.2,77.5,69.0,88.8,859,176,84,290,20
+Base_11_Features,LightGBM,RandomOverSampler,0.65,83.5,69.0,69.0,69.0,88.7,919,116,116,258,11
+Behavior_And_Service_Focused,Logistic Regression,None,0.6,81.2,61.4,78.3,68.9,88.8,851,184,81,293,20
+Base_Without_Revenue_And_Charges,LightGBM,RandomOverSampler,0.54,81.1,61.1,78.6,68.8,88.6,848,187,80,294,9
+Base_11_Features,Random Forest,SMOTE,0.53,80.9,60.8,79.1,68.8,88.9,844,191,78,296,11
+Base_Without_Revenue_And_Charges,LightGBM,RandomUnderSampler,0.61,81.5,62.4,76.5,68.8,88.6,863,172,88,286,9
+Behavior_And_Service_Focused,Logistic Regression,RandomOverSampler,0.6,81.1,61.3,78.1,68.7,88.8,851,184,82,292,20
+Business_Features_No_Total_Revenue,Random Forest,RandomOverSampler,0.61,83.0,67.4,70.1,68.7,88.8,908,127,112,262,24
+Base_Plus_Business_Features,Random Forest,RandomUnderSampler,0.64,83.0,67.1,70.3,68.7,88.5,906,129,111,263,26
+Base_Without_Total_Revenue,Random Forest,SMOTE,0.51,80.4,59.7,80.7,68.6,89.0,831,204,72,302,10
+Base_Plus_Business_Features,LightGBM,None,0.28,80.4,59.7,80.7,68.6,88.8,831,204,72,302,26
+Base_Plus_Business_Features,Random Forest,SMOTE,0.48,80.4,59.7,80.7,68.6,88.6,831,204,72,302,26
+Base_Without_Total_Revenue,Random Forest,None,0.62,82.6,65.8,71.7,68.6,89.0,896,139,106,268,10
+Base_Plus_Business_Features,LightGBM,SMOTE,0.51,82.3,64.7,73.0,68.6,88.7,886,149,101,273,26
+Behavior_And_Service_Focused,LightGBM,RandomUnderSampler,0.59,81.4,62.2,76.2,68.5,88.7,862,173,89,285,20
+Base_Without_Revenue_And_Charges,Random Forest,SMOTE,0.49,80.0,58.9,81.6,68.4,88.6,822,213,69,305,9
+Business_Features_No_Total_Revenue,Random Forest,RandomUnderSampler,0.62,82.5,65.8,71.1,68.4,88.5,897,138,108,266,24
+Base_Without_Revenue_And_Charges,Logistic Regression,None,0.63,81.2,61.8,76.5,68.3,88.2,858,177,88,286,9
+Base_11_Features,Random Forest,None,0.56,81.5,62.8,74.9,68.3,88.9,869,166,94,280,11
+Base_Without_Total_Revenue,Extra Trees,SMOTE,0.6,81.4,62.4,75.4,68.3,88.0,865,170,92,282,10
+Base_11_Features,Extra Trees,SMOTE,0.58,81.3,62.0,75.9,68.3,88.2,861,174,90,284,11
+Base_11_Features,Random Forest,RandomOverSampler,0.61,82.1,64.5,72.5,68.3,88.9,886,149,103,271,11
+Behavior_And_Service_Focused,Logistic Regression,RandomUnderSampler,0.6,81.0,61.3,77.0,68.2,88.7,853,182,86,288,20
+Base_Without_Total_Revenue,Random Forest,RandomOverSampler,0.6,81.8,63.4,73.8,68.2,89.0,876,159,98,276,10
+Base_11_Features,Logistic Regression,None,0.64,81.3,62.1,75.7,68.2,88.2,862,173,91,283,11
+Base_11_Features,Logistic Regression,RandomUnderSampler,0.64,81.2,61.9,75.9,68.2,88.2,860,175,90,284,11
+Base_11_Features,Logistic Regression,RandomOverSampler,0.64,81.1,61.7,76.2,68.2,88.2,858,177,89,285,11
+Base_Without_Revenue_And_Charges,Logistic Regression,SMOTE,0.62,80.8,60.8,77.5,68.2,88.2,848,187,84,290,9
+Base_Without_Total_Revenue,Extra Trees,RandomOverSampler,0.58,81.4,62.5,74.9,68.1,88.1,867,168,94,280,10
+Base_Plus_Business_Features,Extra Trees,None,0.54,81.3,62.3,75.1,68.1,88.1,865,170,93,281,26
+Base_Without_Revenue_And_Charges,Extra Trees,SMOTE,0.61,81.3,62.3,75.1,68.1,88.0,865,170,93,281,9
+Business_Features_No_Total_Revenue,LightGBM,RandomUnderSampler,0.44,78.4,56.1,86.6,68.1,88.5,781,254,50,324,24
+Base_Without_Revenue_And_Charges,Logistic Regression,RandomUnderSampler,0.65,81.3,62.2,75.1,68.0,88.1,864,171,93,281,9
+Base_Without_Revenue_And_Charges,Logistic Regression,RandomOverSampler,0.65,81.2,62.0,75.4,68.0,88.1,862,173,92,282,9
+Business_Features_No_Total_Revenue,Random Forest,None,0.57,82.0,64.5,71.9,68.0,88.8,887,148,105,269,24
+Base_Plus_Business_Features,Random Forest,None,0.56,81.9,64.1,72.5,68.0,88.6,883,152,103,271,26
+Behavior_And_Service_Focused,LightGBM,RandomOverSampler,0.53,80.4,60.0,78.3,68.0,88.5,840,195,81,293,20
+Base_Plus_Business_Features,Extra Trees,RandomOverSampler,0.54,81.5,63.0,73.8,68.0,88.0,873,162,98,276,26
+Base_Without_Revenue_And_Charges,Random Forest,RandomOverSampler,0.58,81.3,62.2,74.9,68.0,88.6,865,170,94,280,9
+Base_Plus_Business_Features,LightGBM,RandomUnderSampler,0.61,81.1,61.7,75.7,67.9,88.4,859,176,91,283,26
+Base_Without_Total_Revenue,Logistic Regression,None,0.63,81.1,61.7,75.7,67.9,88.2,859,176,91,283,10
+Base_Without_Total_Revenue,Logistic Regression,SMOTE,0.63,81.0,61.5,75.9,67.9,88.2,857,178,90,284,10
+Base_Without_Total_Revenue,Logistic Regression,RandomOverSampler,0.63,80.8,61.1,76.5,67.9,88.2,853,182,88,286,10
+Behavior_And_Service_Focused,Random Forest,None,0.47,79.4,57.9,82.1,67.9,88.4,812,223,67,307,20
+Base_Without_Total_Revenue,Random Forest,RandomUnderSampler,0.61,81.8,63.9,72.5,67.9,88.8,882,153,103,271,10
+Behavior_And_Service_Focused,Random Forest,SMOTE,0.55,81.8,63.9,72.5,67.9,88.4,882,153,103,271,20
+Base_11_Features,Logistic Regression,SMOTE,0.61,80.6,60.4,77.5,67.9,88.2,845,190,84,290,11
+Base_11_Features,Extra Trees,RandomOverSampler,0.56,80.8,61.2,76.2,67.9,88.2,854,181,89,285,11
+Behavior_And_Service_Focused,Random Forest,RandomUnderSampler,0.65,82.8,67.2,68.4,67.8,88.2,910,125,118,256,20
+Base_Without_Revenue_And_Charges,Random Forest,None,0.47,78.7,56.6,84.5,67.8,88.5,793,242,58,316,9
+Base_11_Features,LightGBM,RandomUnderSampler,0.54,79.8,58.9,79.9,67.8,88.5,826,209,75,299,11
+Behavior_And_Service_Focused,Extra Trees,SMOTE,0.54,80.8,61.2,75.9,67.8,87.9,855,180,90,284,20
+Base_Without_Total_Revenue,Extra Trees,RandomUnderSampler,0.63,82.0,64.7,71.1,67.8,88.0,890,145,108,266,10
+Base_Without_Revenue_And_Charges,Random Forest,RandomUnderSampler,0.63,82.0,64.5,71.4,67.8,88.6,888,147,107,267,9
+Base_Plus_Business_Features,Random Forest,RandomOverSampler,0.46,79.1,57.4,82.6,67.8,88.7,806,229,65,309,26
+Business_Features_No_Total_Revenue,Extra Trees,RandomUnderSampler,0.6,81.8,64.0,71.9,67.8,88.0,884,151,105,269,24
+Base_Without_Total_Revenue,LightGBM,RandomUnderSampler,0.44,78.1,55.6,86.6,67.7,88.6,776,259,50,324,10
+Base_Without_Total_Revenue,Extra Trees,None,0.58,80.8,61.3,75.7,67.7,88.1,856,179,91,283,10
+Base_Without_Total_Revenue,Logistic Regression,RandomUnderSampler,0.65,81.3,62.4,73.8,67.6,88.2,869,166,98,276,10
+Base_11_Features,Extra Trees,RandomUnderSampler,0.59,81.0,61.7,74.9,67.6,88.1,861,174,94,280,11
+Base_Plus_Business_Features,Extra Trees,SMOTE,0.55,81.8,64.0,71.7,67.6,88.0,884,151,106,268,26
+Base_11_Features,Extra Trees,None,0.62,81.7,63.7,71.9,67.6,88.1,882,153,105,269,11
+Business_Features_No_Total_Revenue,Extra Trees,RandomOverSampler,0.56,81.6,63.5,72.2,67.6,87.9,880,155,104,270,24
+Business_Features_No_Total_Revenue,Extra Trees,None,0.56,81.3,62.7,73.3,67.6,88.0,872,163,100,274,24
+Base_11_Features,Random Forest,RandomUnderSampler,0.57,80.9,61.5,74.9,67.6,88.6,860,175,94,280,11
+Base_Plus_Business_Features,Extra Trees,RandomUnderSampler,0.65,82.5,66.7,68.4,67.5,87.9,907,128,118,256,26
+Behavior_And_Service_Focused,Extra Trees,RandomUnderSampler,0.62,82.0,64.7,70.6,67.5,87.5,891,144,110,264,20
+Base_Without_Revenue_And_Charges,Extra Trees,RandomUnderSampler,0.6,81.2,62.4,73.5,67.5,87.8,869,166,99,275,9
+Business_Features_No_Total_Revenue,Extra Trees,SMOTE,0.55,81.7,63.9,71.4,67.4,88.1,884,151,107,267,24
+Base_Without_Revenue_And_Charges,Extra Trees,RandomOverSampler,0.61,81.7,63.9,71.4,67.4,87.9,884,151,107,267,9
+Base_Without_Revenue_And_Charges,Extra Trees,None,0.6,81.0,61.9,73.5,67.2,87.9,866,169,99,275,9
+Behavior_And_Service_Focused,Random Forest,RandomOverSampler,0.57,81.1,62.4,72.7,67.2,88.4,871,164,102,272,20
+Behavior_And_Service_Focused,Extra Trees,RandomOverSampler,0.58,81.5,63.7,70.3,66.8,87.6,885,150,111,263,20
+Behavior_And_Service_Focused,Extra Trees,None,0.54,80.1,60.0,74.3,66.4,87.7,850,185,96,278,20

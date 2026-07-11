@@ -293,7 +293,7 @@ def show():
          yanchor='top',
          bgcolor='rgba(0,0,0,0)'
        ),
-       margin=dict(t=35, b=20, l=25, r=5)
+       margin=dict(t=35, b=41, l=25, r=5)
        )       
 
         st.plotly_chart(fig1, width='stretch', config={'displayModeBar': False})
@@ -393,7 +393,7 @@ def show():
                 textposition='inside',
                 insidetextorientation='horizontal',
                 textfont=dict(color=TEXT, size=11),
-                domain=dict(x=[0.00, 0.70], y=[0.00, 1.00]),
+                domain=dict(x=[0.00, 0.70], y=[0.2, 1.00]),
                 hovertemplate='%{label}<br>%{value} customers (%{percent})<extra></extra>'
             ))
 
@@ -416,7 +416,7 @@ def show():
                 annotations=[dict(
                     text=f"{total_cat:,}",
                     x=0.35,
-                    y=0.50,
+                    y=0.60,
                     showarrow=False,
                     font=dict(size=18, color=TEXT)
                 )]
@@ -457,7 +457,7 @@ def show():
                 height=275,
                 xaxis=dict(**AX, range=[0, max_reason * 1.28]),
                 yaxis=dict(**AX),
-                margin=dict(t=4, b=20, l=150, r=34)
+                margin=dict(t=4, b=44, l=150, r=34)
             )
 
             st.plotly_chart(fig4, width='stretch', config={'displayModeBar': False})
@@ -465,14 +465,16 @@ def show():
         insight_left, insight_right = st.columns([1.05, 1.15])
 
         with insight_left:
-            chart_title("Key Insights")
-            st.markdown(f"""
-            <div style='font-size:11px;color:{TEXT};line-height:1.5;padding:0 0 0 4px'>
-                <div style='background:rgba(251,113,133,0.08);border-left:3px solid {RED};
-                            border-radius:8px;padding:8px 10px;margin-bottom:8px'>
-                    🔻 <b>Month-to-Month:</b><br>
-                    Highest churn risk segment.
-                </div>
+           st.markdown(f"""
+           <div style='margin-top:-49px'>
+           <div class='chart-title' style='margin-bottom:10px'>Key Insights</div>
+
+           <div style='font-size:11px;color:{TEXT};line-height:1.5;padding:0 0 0 4px'>
+            <div style='background:rgba(251,113,133,0.08);border-left:3px solid {RED};
+                        border-radius:8px;padding:8px 10px;margin-bottom:8px'>
+                🔻 <b>Month-to-Month:</b><br>
+                Highest churn risk segment.
+             </div>
                 <div style='background:rgba(251,113,133,0.08);border-left:3px solid {RED};
                             border-radius:8px;padding:8px 10px'>
                     🔻 <b>First 12 Months:</b><br>
@@ -482,18 +484,19 @@ def show():
             """, unsafe_allow_html=True)
 
         with insight_right:
-            st.markdown("<div style='height:31px'></div>", unsafe_allow_html=True)
-            st.markdown(f"""
-            <div style='font-size:11px;color:{TEXT};line-height:1.5;padding:0 0 0 4px'>
-                <div style='background:rgba(52,211,153,0.08);border-left:3px solid {GREEN};
-                            border-radius:8px;padding:8px 10px;margin-bottom:8px'>
-                    ▲ <b>Two-Year Contracts:</b><br>
-                    Stronger retention.
-                </div>
-                <div style='background:rgba(251,191,36,0.08);border-left:3px solid {GOLD};
-                            border-radius:8px;padding:8px 10px'>
-                    ▲ <b>Competitor Impact:</b><br>
-                    Needs pricing action.
-                </div>
+         st.markdown(f"""
+         <div style='margin-top:-20px'>
+          <div style='font-size:11px;color:{TEXT};line-height:1.5;padding:0 0 0 4px'>
+            <div style='background:rgba(52,211,153,0.08);border-left:3px solid {GREEN};
+                        border-radius:8px;padding:8px 10px;margin-bottom:8px'>
+                ▲ <b>Two-Year Contracts:</b><br>
+                Stronger retention.
             </div>
-            """, unsafe_allow_html=True)
+            <div style='background:rgba(251,191,36,0.08);border-left:3px solid {GOLD};
+                        border-radius:8px;padding:8px 10px'>
+                ▲ <b>Competitor Impact:</b><br>
+                Needs pricing action.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)

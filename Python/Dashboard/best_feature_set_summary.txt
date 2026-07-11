@@ -1,0 +1,27 @@
+
+BEST FEATURE DIAGNOSTICS RESULT
+===============================
+
+Best Feature Set: Business_Features_No_Total_Revenue
+Best Model: XGBoost
+Sampling: RandomUnderSampler
+Best Threshold: 0.66
+
+Accuracy:  84.4%
+Precision: 69.3%
+Recall:    73.8%
+F1 Score:  71.5%
+ROC AUC:   89.8%
+
+Confusion Matrix:
+TN: 913
+FP: 122
+FN: 98
+TP: 276
+
+Results file:
+F:\DEPI\Technical\Python\Final_Project\Telecom_Churn_App1\feature_diagnostics_results.csv
+
+مهم:
+- لو F1 اتحسن بوضوح عن 71.1%، نعدل ml.py على أفضل Feature Set.
+- لو F1 فضل قريب، يبقى وصلنا لسقف الداتا الحالي تقريبًا.
