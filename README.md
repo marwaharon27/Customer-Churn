@@ -75,14 +75,14 @@ Each tool covers the **complete analytics lifecycle** independently — from raw
 
 ### 📊 Excel — Week 1
 - Data Cleaning & Merging via Power Query
-- Star Schema (1 Fact + 5 Dims) in Power Pivot
+- Star Schema (1 Fact + 4 Dims) in Power Pivot
 - Pivot Tables & Interactive Dashboards
 - Descriptive Statistics + T-Test, Chi-Square, ANOVA, Regression
 - Business Insights & Recommendations
 
 ### 🗄 SQL (MySQL) — Week 2
 - Full Data Cleaning & Dataset Merging
-- Star Schema with FK Constraints & Surrogate Keys
+- Star Schema (1 Fact + 5 Dims) with FK Constraints & Surrogate Keys
 - Analytical Queries, Views & Stored Procedures
 - Churn Risk Scoring Query
 - FK Integrity Validation
@@ -172,11 +172,11 @@ Each tool covers the **complete analytics lifecycle** independently — from raw
 
 | Metric | Score |
 |--------|-------|
-| Accuracy | ~79% |
-| Recall | ~81% |
-| F1 Score | ~68% |
-| Train-Test Gap | ~4 pts (No Overfitting) |
-| 5-Fold CV Mean | ~81% |
+| Accuracy | ~84% |
+| Recall | ~73% |
+| F1 Score | ~71% |
+| Train-Test Gap | ~0.7 pts (No Overfitting) |
+| 5-Fold CV Mean | ~83% |
 
 ---
 
@@ -203,39 +203,6 @@ Each tool covers the **complete analytics lifecycle** independently — from raw
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=flat&logoColor=white)
-
----
-
-## 📁 Repository Structure
-Telecom-Churn-Analysis/
-│
-├── Excel/
-│   └── Telecom_Churn_Analysis.xlsx
-│
-├── SQL/
-│   └── Cleaning.sql
-│
-├── Python/
-│   ├── Cleaning_Data_Modeling.ipynb
-│   ├── Analysis.ipynb
-│   └── Telecom_Churn_App/
-│       ├── app.py
-│       ├── screens/
-│       │   ├── overview.py
-│       │   ├── dashboard.py
-│       │   ├── customer.py
-│       │   └── ml.py
-│       └── utils/
-│           └── load_data.py
-│
-├── PowerBI/
-│   └── Telecom_Churn.pbix
-│
-├── Tableau/
-│   └── Telecom_Churn.twbx
-│
-└── Documentation/
-└── Telecom_Churn_Documentation.docx
 
 ---
 
