@@ -81,21 +81,21 @@ This project goes further: it predicts it, simulates solutions, and ranks which 
 
 Each tool covers the **complete analytics lifecycle** independently — from raw data to final insights.
 
-### 📊 Excel — Week 1
+### 📊 Excel 
 - Data Cleaning & Merging via Power Query
 - Star Schema (1 Fact + 4 Dims) in Power Pivot
 - Pivot Tables & Interactive Dashboards
 - Descriptive Statistics + T-Test, Chi-Square, ANOVA, Regression
 - Business Insights & Recommendations
 
-### 🗄 SQL (MySQL) — Week 2
+### 🗄 SQL (MySQL) 
 - Full Data Cleaning & Dataset Merging
 - Star Schema (1 Fact + 5 Dims) with FK Constraints & Surrogate Keys
 - Analytical Queries, Views & Stored Procedures
 - Churn Risk Scoring Query
 - FK Integrity Validation
 
-### 🐍 Python — Week 3
+### 🐍 Python 
 - Data Cleaning & Feature Engineering (pandas)
 - SQLite3 Star Schema Implementation
 - EDA & Statistical Analysis
@@ -108,14 +108,14 @@ Each tool covers the **complete analytics lifecycle** independently — from raw
   - Priority Retention Watchlist
   - What-If Business Strategy Simulator
 
-### 📈 Power BI — Week 4
+### 📈 Power BI 
 - Power Query ETL Pipeline
 - Data Modeling & DAX Measures
 - Interactive Multi-Page Dashboard
 - KPI Cards, Drill-Through Reports
 - Executive Insights & Recommendations
 
-### 📊 Tableau — Week 5
+### 📊 Tableau 
 - Interactive Visual Analytics
 - Geographic Churn Analysis
 - Customer Segmentation Storytelling
