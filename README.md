@@ -1,4 +1,11 @@
-# 📡 Telecom Customer Churn Analysis & Intelligence Platform
+<div align="center">
+
+<img
+src="https://github.com/user-attachments/assets/219a453f-cdc4-4bb0-ad8a-61299051de77"
+width="650"
+/>
+
+</div>
 
 > **When 1 in 4 customers leaves every month — the answer is in the data.**
 
