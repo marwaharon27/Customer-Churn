@@ -20,12 +20,12 @@ A full end-to-end data analysis project built as part of the **Digital Egypt Pio
 | **Marwa Haron** | Team Leader & Data Analyst | Project management, data preprocessing & cleaning, star schema data modeling, ML model development, Streamlit dashboard |
 | **Salma Ahmed** | Data Analyst | Data preprocessing & cleaning, star schema data modeling, ML model development, Streamlit dashboard |
 | **Noor Kamal** | Data Analyst | Descriptive statistics & inferential statistics — source of insights and key findings |
-| **Shahd Tawfik** | Data Analyst | Pivot tables & analytical queries |
+| **Shahd Tawfik** | Data Analyst | Pivot tables & analytical queries — source of insights and key findings |
 | **Mariam Ahmed** | Data Analyst | Interactive dashboard design across Excel, Power BI & Tableau — source of insights and key findings |
 
 **Instructor:** Dr. Amal Mahmoud
 
-**Track:** Data Analysis Specialist_DEPI × YAT Learning Centers
+**Track:** Data Analysis Specialist (DEPI × YAT Learning Centers)
 
 ---
 
