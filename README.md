@@ -24,7 +24,8 @@ A full end-to-end data analysis project built as part of the **Digital Egypt Pio
 | **Mariam Ahmed** | Data Analyst | Interactive dashboard design across Excel, Power BI & Tableau — source of insights and key findings |
 
 **Instructor:** Dr. Amal Mahmoud
-**Track:** Data Analysis Specialist — DEPI × YAT Learning Centers
+
+**Track:** Data Analysis Specialist_DEPI × YAT Learning Centers
 
 ---
 
