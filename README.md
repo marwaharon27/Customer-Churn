@@ -36,7 +36,7 @@ A full end-to-end data analysis project built as part of the **Digital Egypt Pio
 - 🛠 **5 Tools** — Full Independent Implementation per Tool
 - ⭐ **Star Schema** — 1 Fact Table + 5 Dimension Tables
 - 📊 **3 Interactive Dashboards** (Excel, Power BI, Tableau)
-- 🤖 **XGBoost ML Model** with Overfitting Detection & 5-Fold CV
+- 🤖 **XGBoost ML Model** with 5-Fold CV
 - 🔮 **What-If Business Simulator** — Real retention strategy testing
 - 🚨 **Priority Customer Watchlist** — Risk × Revenue ranking
 - 📈 **Inferential Statistics** — T-Test, Chi-Square, ANOVA, Regression
